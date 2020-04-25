@@ -1,0 +1,1 @@
+This application seeks to detect phishing attempts using some basic processing techniques.
