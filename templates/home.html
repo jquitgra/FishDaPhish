@@ -1,0 +1,23 @@
+<html>
+  <body>
+    <form method="POST" action="/">
+      <input type="text" name="title">
+      <input type="body" name="Body">
+      <input type="submit" value="Add">
+    </form>
+
+    <h1>Emails</h1>
+    {% for email in emails %}
+        <p>{{email.subject}}</p>
+        <form method="POST" action="./update">
+            <input type="hidden" value="{{email.subject}}" name="oldtitle">
+            <input type="text" value="{{email.subject}}" name="newtitle">
+            <input type="submit" value="Update">
+        </form>
+        <form method="POST" action="./delete">
+            <input type="hidden" value="{{email.subject}}" name="title">
+            <input type="submit" value="Delete">
+        </form>
+    {% endfor %}
+  </body>
+</html>
