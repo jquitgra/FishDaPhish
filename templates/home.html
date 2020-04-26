@@ -18,6 +18,10 @@
             <input type="hidden" value="{{email.subject}}" name="title">
             <input type="submit" value="Delete">
         </form>
+        <form method="POST" action="./validate">
+          <input type="hidden" value="{{email.body}}" name="input_val">
+          <input type="submit" value="Update">
+        </form>
     {% endfor %}
   </body>
 </html>

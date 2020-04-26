@@ -2,9 +2,7 @@ import math
 import numpy as np
 from textblob import TextBlob
 
-def get_emailData(file):
-    with open(file, "r") as infile:
-        data = infile.read().replace('\n', ' ')
+def get_emailData(data):
     body = data
     blob = TextBlob(body)
     tag_vec = []
